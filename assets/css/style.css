@@ -38,3 +38,11 @@ body{
 .skyblue{
     background-color: skyblue;
 }
+
+button{
+    background-color: lightseagreen;
+    color: white;
+    padding: 0.5rem;
+    border-style: none;
+    border-radius: 1rem;
+}

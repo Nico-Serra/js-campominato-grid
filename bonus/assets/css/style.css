@@ -56,3 +56,19 @@ body {
     align-items: center;
     justify-content: center;
 }
+button{
+    background-color: lightseagreen;
+    color: white;
+    padding: 0.5rem;
+    border-style: none;
+    border-radius: 1rem;
+}
+
+select{
+    background-color: lightgreen;
+    color: white;
+    padding: 0.5rem;
+    border-style: none;
+    border-radius: 1rem;
+    outline: none;
+}
