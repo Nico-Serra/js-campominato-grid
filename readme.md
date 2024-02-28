@@ -41,6 +41,5 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento.
 
 - AddEventListner
 - for/while
-- createElement
 - variabii
 - log
