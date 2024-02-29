@@ -23,6 +23,7 @@ body{
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 
     .box{
         width: 50px;
@@ -39,6 +40,11 @@ body{
     background-color: skyblue;
 }
 
+.red{
+    background-color: red;
+}
+
+
 button{
     background-color: lightseagreen;
     color: white;
@@ -46,3 +52,4 @@ button{
     border-style: none;
     border-radius: 1rem;
 }
+
