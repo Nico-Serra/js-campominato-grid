@@ -36,7 +36,7 @@ form.addEventListener('submit', function (e) {
 
     const cells = document.querySelectorAll('.box')
 
-    
+    let clicks = 0
 
     //addClassElementCell(cells)
     /*Quando l'utente clicca su una cella
@@ -46,12 +46,12 @@ form.addEventListener('submit', function (e) {
     for (let i = 0; i < cells.length; i++) {
 
         const elementCell = cells[i];
-
         
+
         //console.log(elementCell);
 
-        /*elementCell.addEventListener('click', function () {
-            let clicks = 0
+        elementCell.addEventListener('click', function () {
+            
             // elementCell.classList.toggle('skyblue')
             clicks++
             console.log(clicks);
@@ -66,19 +66,21 @@ form.addEventListener('submit', function (e) {
                 console.log('end game');
                 elementCell.innerHTML = '🍄'
                 
-                //container.insertAdjacentHTML('beforeend', '<h3>Mi dispiace hai perso</h3>')
+                container.insertAdjacentHTML('beforeend', '<h3>Mi dispiace hai perso</h3>')
                 //elementCell.removeEventListener('click', getClassSky)
-             } //else if (clicks === numberCells - mushroomList.length) {
+             } else if (clicks === numberCells - mushroomList.length) {
             //     console.log('you win');
-            //     container.insertAdjacentHTML('beforeend', '<h3>Congratulazioni hai vinto</h3>')
-            // } else { elementCell.classList.add('skyblue') }
-        })*/
- 
-        elementCell.addEventListener('click', getClassBg(elementCell, mushroomList))
-        elementCell.removeEventListener('click', getClassBg(elementCell, mushroomList))
+                 container.insertAdjacentHTML('beforeend', '<h3>Congratulazioni hai vinto</h3>')
+             } else {
+                 elementCell.classList.add('skyblue') 
+                 }
+        })
+
+        //elementCell.addEventListener('click', getClassBg)
+        //elementCell.removeEventListener('click', getClassBg)
 
 
-    }
+    }//container.insertAdjacentHTML('beforeend', `<div>hai provato ${clicks}</div>`)
 
 
 
@@ -154,39 +156,7 @@ function getRandomNumber(min, max) {
 }
 
 function getClassBg(elementCell, mushroomList) {
-    //const cells = document.querySelectorAll('.box')
     
-    //for (let i = 0; i < cells.length; i++) {
-
-        //const elementCell = cells[i];
-        //console.log(elementCell);
-        let clicks = 0
-
-        //elementCell.addEventListener('click', function (){
-            
-            // elementCell.classList.toggle('skyblue')
-            clicks++
-            //console.log(clicks);
-            let numb = Number(elementCell.textContent)
-            //console.log(numb);
-            //console.log(mushroomList);
-            //console.log(mushroomList.includes(numb));
-           // elementCell.classList.add('skyblue') 
-
-            if (mushroomList.includes(numb)) {
-                elementCell.classList.add('red')
-                console.log('end game');
-                elementCell.innerHTML = '🍄'
-                
-                //container.insertAdjacentHTML('beforeend', '<h3>Mi dispiace hai perso</h3>')
-                
-             }else if (clicks === numberCells - mushroomList.length) {
-            //     console.log('you win');
-            //     container.insertAdjacentHTML('beforeend', '<h3>Congratulazioni hai vinto</h3>')
-            } else { elementCell.classList.add('skyblue') }
-        //})
-          
-//}
 }
 
 function getClassSky() {
