@@ -8,7 +8,9 @@ const container = document.querySelector('.container')
 //- Al click del bottone genero una griglia quadrata con 10 caselle per ognuna delle 10 righe, ogni cella sarà numerata progressivamente
 form.addEventListener('submit', function (e) {
 
-    e.preventDefault
+    e.preventDefault()
+
+    container.innerHTML = ''
 
     const select = document.getElementById('difficoult').value
     console.log(select);
@@ -33,14 +35,15 @@ form.addEventListener('submit', function (e) {
 
             elementCell.addEventListener('click', function () {
                 elementCell.classList.toggle('skyblue')
-                console.log(elementCell);
+                let numb = elementCell.textContent
+                console.log(numb)
             })
 
         }
 
 
     } else if (select === 'difficoult 2') {
-        
+
 
         for (let i = 0; i < 81; i++) {
 
@@ -56,11 +59,11 @@ form.addEventListener('submit', function (e) {
         for (let i = 0; i < cells.length; i++) {
 
             const elementCell = cells[i];
-            //console.log(elementCell);
 
             elementCell.addEventListener('click', function () {
                 elementCell.classList.toggle('skyblue')
-                console.log(elementCell);
+                let numb = elementCell.textContent
+                console.log(numb)
             })
 
         }
@@ -79,11 +82,13 @@ form.addEventListener('submit', function (e) {
         for (let i = 0; i < cells.length; i++) {
 
             const elementCell = cells[i];
-            //console.log(elementCell);
+
+           
 
             elementCell.addEventListener('click', function () {
                 elementCell.classList.toggle('skyblue')
-                console.log(elementCell);
+                let numb = elementCell.textContent
+                console.log(numb)
             })
 
         }
