@@ -66,11 +66,11 @@ form.addEventListener('submit', function (e) {
                 console.log('end game');
                 elementCell.innerHTML = '🍄'
                 
-                container.insertAdjacentHTML('beforeend', '<h3>Mi dispiace hai perso</h3>')
+                container.insertAdjacentHTML('beforeend', `<h3>Mi dispiace hai perso, hai cliccato ${clicks} volte</h3>`)
                 //elementCell.removeEventListener('click', getClassSky)
              } else if (clicks === numberCells - mushroomList.length) {
             //     console.log('you win');
-                 container.insertAdjacentHTML('beforeend', '<h3>Congratulazioni hai vinto</h3>')
+                 container.insertAdjacentHTML('beforeend', `<h3 Congratulazioni hai vinto, hai cliccato ${clicks} volte</h3>`)
              } else {
                  elementCell.classList.add('skyblue') 
                  }
